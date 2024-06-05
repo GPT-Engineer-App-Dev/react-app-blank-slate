@@ -1,5 +1,5 @@
 import { Box, Flex, Link, useColorModeValue, Stack, useDisclosure, IconButton, HStack } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -10,7 +10,7 @@ const NavBar = () => {
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <IconButton
           size="md"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={isOpen ? <FaTimes /> : <FaBars />}
           aria-label="Open Menu"
           display={{ md: "none" }}
           onClick={isOpen ? onClose : onOpen}
